@@ -6,10 +6,11 @@
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   width: 100vw;
   display: grid;
-  grid-template: 0.35fr 1fr 1fr/0.75fr 3fr 1.25fr;
+  grid-template: 0.35fr 1fr 1fr/1fr 3fr 1.15fr;
 }
 
 .navbar {
@@ -57,14 +58,17 @@ main {
 .projects {
   background-color: #fbbf24;
   grid-row: 2/4;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 
 .announcements {
-  background-color: #4ade80;
+  background-color: #fbbf24;
 }
 
 .trending {
-  background-color: #22d3ee;
+  background-color: #fbbf24;
 }
 
 nav {
@@ -120,12 +124,6 @@ nav .user--greeting {
   grid-auto-flow: column;
   align-items: center;
 }
-nav .user--icon {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: blue;
-}
 nav .user--buttons {
   display: grid;
   grid-auto-flow: column;
@@ -139,21 +137,35 @@ nav .user--buttons button {
   border-radius: 1rem;
 }
 
+.user--icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
 .projects {
   padding: 1rem;
+  padding-right: 3rem;
   display: grid;
   grid-template-rows: -webkit-min-content 1fr;
   grid-template-rows: min-content 1fr;
   gap: 1rem;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 .projects .projects--container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(150px, 0.5fr));
   gap: 1rem;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 .projects .project--card {
   background-color: wheat;
-  height: max(215px, 10vh);
   padding: 1rem 1rem 1rem 2rem;
   border-radius: 5px;
   display: grid;
@@ -173,4 +185,55 @@ nav .user--buttons button {
   grid-auto-flow: column;
   width: auto;
   grid-column-start: -2;
+}
+
+.announcements {
+  padding: 1rem;
+  padding-right: 3rem;
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr;
+  grid-template-rows: min-content 1fr;
+  gap: 1rem;
+}
+.announcements .announcement--container {
+  background-color: white;
+  display: grid;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.announcements .announcement--container p {
+  font-size: 0.75rem;
+}
+.announcements .announcement--container hr {
+  outline: none;
+  border: none;
+  border-top: 1px solid gray;
+}
+
+.trending {
+  padding: 1rem;
+  padding-right: 3rem;
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr;
+  grid-template-rows: min-content 1fr;
+  gap: 1rem;
+}
+.trending .trending--container {
+  background-color: white;
+  display: grid;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.trending .trending--container ul {
+  display: grid;
+  gap: 0.5rem;
+}
+.trending .trending--container ul li {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: -webkit-min-content 1fr;
+  grid-template-columns: min-content 1fr;
+  grid-auto-flow: column;
+  font-size: 0.85rem;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
