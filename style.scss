@@ -9,7 +9,7 @@ main{
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template: 0.35fr 1fr 1fr/ 0.75fr 3fr 1fr;
+    grid-template: 0.35fr 1fr 1fr/ 0.75fr 3fr 1.25fr;
 }
 
 
@@ -139,3 +139,49 @@ nav{
     }
     
 }
+
+@mixin gridContainer(){
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 1rem;
+}
+.projects{
+   @include gridContainer();
+    .projects--container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    .project--card{
+        background-color: wheat;
+        height: max( 215px, 10vh);        padding: 1rem 1rem 1rem 2rem ;
+        
+        border-radius: 5px;
+
+
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 1rem;
+
+        .project--card-text{
+            grid-column: 1/3;
+
+            .project--card-desc{
+                font-size: 0.85rem;
+            }
+        }
+        .project--card-btns{
+            display: grid;
+            grid-auto-flow: column;
+            width: auto;
+            
+            grid-column-start: -2;
+           
+        }
+    }
+}
+
