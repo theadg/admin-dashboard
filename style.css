@@ -65,4 +65,76 @@ main {
 
 .trending {
   background-color: #22d3ee;
+}
+
+nav {
+  padding: 1rem 2rem;
+  display: grid;
+  justify-content: start;
+  grid-auto-flow: column;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+}
+nav header {
+  display: grid;
+  justify-content: start;
+  grid-auto-flow: column;
+  gap: 0.75rem;
+  grid-template-columns: 3fr 1fr;
+}
+nav .navbar--search {
+  display: grid;
+  justify-content: start;
+  grid-auto-flow: column;
+  gap: 0.75rem;
+  grid-template-columns: -webkit-min-content 0.75fr;
+  grid-template-columns: min-content 0.75fr;
+}
+nav .navbar--search input[type=search] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background-color: #e2f8f0;
+  border-radius: 1rem;
+  padding: 0 1rem;
+}
+nav .account--btns {
+  display: grid;
+  justify-content: start;
+  grid-auto-flow: column;
+  gap: 0.75rem;
+  grid-auto-flow: column;
+  justify-content: end;
+}
+nav .lower-header {
+  grid-template-columns: 1fr 0.5fr;
+}
+nav .user--greeting {
+  display: grid;
+  justify-content: start;
+  grid-auto-flow: column;
+  gap: 0.75rem;
+  grid-auto-flow: column;
+  align-items: center;
+}
+nav .user--icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: blue;
+}
+nav .user--buttons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+  align-items: center;
+}
+nav .user--buttons button {
+  height: 50%;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
 }/*# sourceMappingURL=style.css.map */
