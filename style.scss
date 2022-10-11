@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 0.75fr 1fr 1fr/ 0.75fr 3fr 1fr;
+}
+
+
+// adding bgcolor for visualizations
+.navbar{
+    background-color: #ef4444;  
+    grid-column: 2 / 4;
+}
+
+.sidebar{
+    background-color: #fb923c;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.projects{
+    background-color: #fbbf24;
+    grid-row: 2 / 4;
+}
+
+.announcements{
+    background-color: #4ade80;
+}
+
+.trending{
+    background-color: #22d3ee;
+}
