@@ -10,13 +10,11 @@ main{
     max-height: 100%;
     width: 100vw;
     display: grid;
-    // grid-template: 0.35fr 1fr 1fr/ 0.75fr 3fr 1.25fr;
     grid-template: 0.15fr 1fr 1fr/ 0.15fr 0.75fr 3fr 1.15fr;
 
 }
 
 
-// adding bgcolor for visualizations
 .navbar{
     background-color: #ef4444;  
     grid-column: 2 / 5;
@@ -24,7 +22,6 @@ main{
 
 @mixin gridText {
     display: grid;
-    // align-items: center;
     justify-content: start;
     grid-auto-flow: column;
     gap: 0.75rem;
@@ -69,12 +66,10 @@ main{
 
 .announcements{
     background-color: #fbbf24;
-    // background-color: #4ade80;
 }
 
 .trending{
     background-color: #fbbf24;
-    // background-color: #22d3ee;
 }
 
 nav{
@@ -113,14 +108,12 @@ nav{
 
     .lower-header{
         grid-template-columns: 1fr 0.5fr;
-        // justify-content: space-evenly;
+ 
     }
     .user--greeting{
         @include gridText();
         grid-auto-flow: column;
         align-items: center;
-        // justify-content: center;
-        // grid-template-columns: ;
     }
 
 
@@ -172,11 +165,8 @@ a {
 
     .project--card{
         background-color: wheat;
-        // height: max( 215px, 10vh);        
         padding: 1rem 1rem 1rem 2rem ;
-        
         border-radius: 5px;
-
 
         display: grid;
         grid-template-rows: 2fr 1fr;
@@ -234,7 +224,6 @@ a {
         ul {
             display: grid;
             gap: 0.5rem;
-            // grid-template-columns: 1fr 1fr;
 
             li{
                 display: grid;
