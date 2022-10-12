@@ -63,9 +63,10 @@ main {
 }
 
 .projects {
-  background-color: #CEF3EC;
-  border-radius: 15px;
+  margin-right: 1rem;
   margin-bottom: 1rem;
+  border-radius: 15px;
+  background-color: #CEF3EC;
   grid-row: 2/4;
   grid-column: 2/4;
   max-height: -webkit-fit-content;
@@ -75,14 +76,16 @@ main {
 
 .announcements {
   margin-right: 1rem;
+  margin-bottom: 0;
   border-radius: 15px;
   background-color: #CEF3EC;
 }
 
 .trending {
-  background-color: #CEF3EC;
   margin-right: 1rem;
+  margin-bottom: 0;
   border-radius: 15px;
+  background-color: #CEF3EC;
 }
 
 nav {
@@ -162,6 +165,8 @@ nav .user--buttons button {
 
 a {
   padding-right: 2rem;
+  text-decoration: none;
+  color: inherit;
 }
 
 .user--icon {
@@ -191,7 +196,7 @@ a {
 }
 .projects .project--card {
   background-color: #9DE7DA;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem;
   border-radius: 1rem;
   display: grid;
   grid-template-rows: -webkit-max-content -webkit-min-content;
@@ -272,11 +277,6 @@ a {
   grid-auto-flow: column;
   font-size: 0.85rem;
   align-items: center;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 @media screen and (max-width: 1000px) {
