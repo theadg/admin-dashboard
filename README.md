@@ -34,4 +34,4 @@ CSS Grid is such a powerful layout tool. It's the only layout tool I used for th
 
 ### Continued development
 
-I have yet to learn more about using Semantic HTML tags for better accessibility. Also, I will have to improve my workflow to be more efficient with my time.
+I have yet to learn more about using Semantic HTML tags for better accessibility. Additionally, I will adjust the color of my elements to have better contrast. Also, I will have to improve my workflow to be more efficient with my time.
