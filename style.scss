@@ -10,21 +10,18 @@ main{
     max-height: 100%;
     width: 100vw;
     display: grid;
-    // grid-template: 0.35fr 1fr 1fr/ 0.75fr 3fr 1.25fr;
-    grid-template: 0.15fr 1fr 1fr/ 1fr 3fr 1.15fr;
+    grid-template: 0.15fr 1fr 1fr/ 0.15fr 0.75fr 3fr 1.15fr;
 
 }
 
 
-// adding bgcolor for visualizations
 .navbar{
     background-color: #ef4444;  
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
 }
 
 @mixin gridText {
     display: grid;
-    // align-items: center;
     justify-content: start;
     grid-auto-flow: column;
     gap: 0.75rem;
@@ -63,17 +60,16 @@ main{
 .projects{
     background-color: #fbbf24;
     grid-row: 2 / 4;
+    grid-column: 2 / 4;
     max-height: fit-content;
 }
 
 .announcements{
     background-color: #fbbf24;
-    // background-color: #4ade80;
 }
 
 .trending{
     background-color: #fbbf24;
-    // background-color: #22d3ee;
 }
 
 nav{
@@ -83,7 +79,7 @@ nav{
     grid-auto-flow: row;
     header{
         @include gridText();
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 3fr 1.5fr;
         
     }
 
@@ -112,14 +108,12 @@ nav{
 
     .lower-header{
         grid-template-columns: 1fr 0.5fr;
-        // justify-content: space-evenly;
+ 
     }
     .user--greeting{
         @include gridText();
         grid-auto-flow: column;
         align-items: center;
-        // justify-content: center;
-        // grid-template-columns: ;
     }
 
 
@@ -139,6 +133,9 @@ nav{
     
 }
 
+a {
+    padding-right:  2rem;
+}
 .user--icon{
     height: 60px;
     width: 60px;
@@ -168,11 +165,8 @@ nav{
 
     .project--card{
         background-color: wheat;
-        // height: max( 215px, 10vh);        
         padding: 1rem 1rem 1rem 2rem ;
-        
         border-radius: 5px;
-
 
         display: grid;
         grid-template-rows: 2fr 1fr;
@@ -230,7 +224,6 @@ nav{
         ul {
             display: grid;
             gap: 0.5rem;
-            // grid-template-columns: 1fr 1fr;
 
             li{
                 display: grid;
@@ -243,5 +236,57 @@ nav{
         }
 
       
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (max-width: 1000px) {
+    .main{
+        grid-template: 0.15fr 1fr 1fr/ 0.15fr  3fr 1.15fr;
+    }
+    .announcements, .trending{
+        display: none;
+    }
+    
+    .projects{
+        grid-column: 2 / 5;
+    }
+
+    nav{
+        header{
+            @include gridText();
+            grid-template-columns: 3fr 2fr;
+            
+        }
+
+    }
+
+    .sidebar{
+        grid-column: 1;
+
+
+        a {
+            display: none;
+        }
+    }
+}
+
+@media  screen and (max-width: 780px) {
+    .user--icon, .user-greeting-text{
+        display: none;
+    }
+
+    .user--buttons{
+        grid-column: 1 / 3;
+        align-items: center;
+        justify-content: center;
+        button{
+        min-height: 32px;
+        max-width: 100%;
+       }
     }
 }
