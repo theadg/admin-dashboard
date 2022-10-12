@@ -10,14 +10,20 @@ main{
     max-height: 100%;
     width: 100vw;
     display: grid;
+    gap: 1rem;
     grid-template: 0.15fr 1fr 1fr/ 0.15fr 0.75fr 3fr 1.15fr;
-
+    background-color: #EFFBF9;
 }
 
 
 .navbar{
-    background-color: #ef4444;  
+    background-color: #9DE7DA;
+    color: #3e697a;
     grid-column: 2 / 5;
+    margin-right: 1rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
 }
 
 @mixin gridText {
@@ -27,14 +33,15 @@ main{
     gap: 0.75rem;
 }
 .sidebar{
-    background-color: #fb923c;
+    background-color: #2A9D8F; 
+    color: #EFFBF9;
     grid-column: 1 / 2;
     grid-row: 1 / 4;
-    padding: 1rem;
+    padding: 1rem 2rem;
 
     display: grid;
     grid-template-rows: repeat(3, min-content);
-    gap: 2rem;
+    gap: 2.5rem;
     .sidebar--title{
        @include gridText();
     }
@@ -52,24 +59,33 @@ main{
         list-style-type: none;
         @include gridText();
         gap: 1.15rem;
-       
     }
 
 }
 
 .projects{
-    background-color: #fbbf24;
+    background-color: #CEF3EC;
+    border-radius: 15px;
+    margin-bottom:  1rem;
     grid-row: 2 / 4;
     grid-column: 2 / 4;
     max-height: fit-content;
 }
 
 .announcements{
-    background-color: #fbbf24;
+    // background-color: #fbbf24;
+    margin-right: 1rem;
+    border-radius: 15px;
+    background-color: #CEF3EC;
+    
 }
 
 .trending{
-    background-color: #fbbf24;
+    // background-color: #fbbf24;
+    background-color: #CEF3EC;
+    margin-right: 1rem;
+    border-radius: 15px;
+
 }
 
 nav{
@@ -85,7 +101,7 @@ nav{
 
     .navbar--search{
         @include gridText();
-    
+        align-items: center;
         grid-template-columns: min-content 0.75fr;
         input[type=search]{
             appearance: none;
@@ -103,6 +119,8 @@ nav{
     .account--btns{
         @include gridText();
         grid-auto-flow: column;
+        align-items: center;
+
         justify-content: end;
     }
 
@@ -121,10 +139,15 @@ nav{
     .user--buttons{
         display: grid;
         grid-auto-flow: column;
-        gap: 2rem;
+        gap: 1rem;
         align-items: center;
+        
         button{
+            font-size: 0.85rem;
             height: 50%;
+            background-color: #2A9D8F;
+            color: #e2f8f0;
+            font-weight: 600;
             border: none;
             padding: 0.5rem 2rem;
             border-radius: 1rem;
@@ -140,7 +163,7 @@ a {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: blue;
+    border: 5px solid #2A9D8F;
 }
 
 @mixin gridContainer(){
@@ -154,26 +177,31 @@ a {
    @include gridContainer();
    min-height: fit-content;
    padding-left: 2.8rem;
+   color: #335F70;
+
     .projects--container{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-     
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 1rem;
-        min-height: fit-content;
-         
     }
 
     .project--card{
-        background-color: wheat;
-        padding: 1rem 1rem 1rem 2rem ;
-        border-radius: 5px;
+        background-color: #9DE7DA;
+        padding: 1rem 1rem 1rem 1rem ;
+        border-radius: 1rem;
 
         display: grid;
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: max-content min-content;
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 1rem;
 
+        .project--image{
+            width: 100%;
+            height: 200px;
+            border-radius: 1rem;
+            // border: 3px solid #;
+        }
         .project--card-text{
             grid-column: 1/3;
 
@@ -194,9 +222,12 @@ a {
 
 .announcements{
     @include gridContainer();
-
+    padding-left: 2rem;
+    color: #335F70;
+    
     .announcement--container{
-        background-color: white;
+        background-color: #9DE7DA;
+        // color: #2A9D8F;
         display: grid;
         padding: 1rem;
         border-radius: 5px;
@@ -214,9 +245,12 @@ a {
 
 .trending{
     @include gridContainer();
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    color: #335F70;
 
     .trending--container{
-        background-color: white;
+        background-color: #9DE7DA;
         display: grid;
         padding: 1rem;
         border-radius: 5px;
